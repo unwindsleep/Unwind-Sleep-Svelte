@@ -31,11 +31,11 @@ export const store = {
   updateStore: (data) => {
     webData.update((prevState: any) => {
         let parsedData: any = {
-            mattresses: null,
-            pillows: null
+            mattress: null,
+            pillow: null
         }
         let tempMattress = data.find(item => item.id === 'gid://shopify/Product/6623455838388')
-        parsedData.mattresses = {
+        parsedData.mattress = {
             description: tempMattress.description,
             id: tempMattress.id,
             images: tempMattress.images.map(image => {
@@ -60,7 +60,7 @@ export const store = {
             })
         }
         let tempPillows = data.find(item => item.id === 'gid://shopify/Product/6713517277364')
-        parsedData.pillows = {
+        parsedData.pillow = {
             description: tempPillows.description,
             id: tempPillows.id,
             images: tempPillows.images.map(image => {
